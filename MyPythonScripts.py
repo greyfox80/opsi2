@@ -34,9 +34,9 @@ model  = load_model('Model_Data_organic_005.keras')
 
 
 # Load_ Class Name
-class_names = ['1', '2', '3']
-class_name2 = ['Low','Medium','High']
-class_name3 = ['Siaga, Lingkungan perlu di awasi oleh warga', 'Waspada, Warga di sarankan segera menjadwalkan pembersihan lingkungan','Berbahaya, Segera lakukan pembersihan lingkungan']
+class_names = ['1', '2']
+class_name2 = ['Low','Medium']
+class_name3 = ['Siaga, Lingkungan perlu di awasi oleh warga', 'Waspada, Warga di sarankan segera menjadwalkan pembersihan lingkungan']
 
 
 # Display Image
@@ -61,6 +61,7 @@ if file is not None:
          st.write("## Prediction Level : {} ".format(class_name2[index]))
          st.write("## Prediction Prob : {:.0%} ".format(prob, '.0%'))
          st.write("## Action Recommendation : {} ".format(class_name3[index]))
+
 
 
 
