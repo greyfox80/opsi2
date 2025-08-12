@@ -9,13 +9,13 @@ import time
 from annotated_text import annotated_text
 
 # Title
-st.title("Welcome to 'EcoEye' Predictions")
+st.title("Selamat Datang di Aplikasi Sorta - Sorting Trash Assistant")
 
 # Header
-st.header("Classify Contamination in your Environment")
+st.header("Klasifikasi Sampah di Lingkungan Anda")
 
 # Upload the File
-file = st.file_uploader("Upload you garbage image in uploder below and we will predict which level contagious the garbage", type=['jpeg','jpg','png'])
+file = st.file_uploader("Unggah foto sampah Anda pada kolom unggah di bawah, dan kami akan memprediksi apakah sampah tersebut termasuk organik atau anorganik.", type=['jpeg','jpg','png'])
 
 col1, col2, col3 = st.columns(3)    
 with col1:
@@ -26,7 +26,7 @@ with col2:
     """    
 with col3:
     annotated_text(
-                ("by","Shafira A.A","#8ef"),("","SMUN 12 JKT","#faa")
+                ("by","Shafira dan Murin","#8ef"),("","SMUN 12 JKT","#faa")
               )
 
 # Load Model Classification
@@ -61,6 +61,7 @@ if file is not None:
          st.write("## Prediction Level : {} ".format(class_name2[index]))
          st.write("## Prediction Prob : {:.0%} ".format(prob, '.0%'))
          st.write("## Action Recommendation : {} ".format(class_name3[index]))
+
 
 
 
